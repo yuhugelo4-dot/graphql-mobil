@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Mobil {
+  int32 id = 1;
+  string type = 2;
+  double harga = 3;
+  int32 produksi_per_tahun = 4;
+}
+
+message MobilRequest {
+  int32 id = 1;
+}
+
+service MobilService {
+  rpc GetMobil(MobilRequest) returns (Mobil);
+}
